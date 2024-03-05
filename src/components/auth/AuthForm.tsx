@@ -28,7 +28,7 @@ export const AuthForm: React.FC<AuthFormProps> = (props) => {
   return (
     <>    
       <Container size="xs" mt="md">
-        <Title order={2}>✈️ travelapp</Title>
+        <Title order={2}>NomadNotes</Title>
         <Paper shadow="md" p="xl" mt="lg">
           <Title order={2} mb="md">
             {props.title}

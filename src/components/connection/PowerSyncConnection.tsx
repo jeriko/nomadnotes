@@ -21,6 +21,9 @@ export function PowerSyncConnection() {
 
   return (
     <>      
+      {syncStatus?.dataFlowStatus.uploading ? <IconArrowUp color="gray" /> : null}
+      {syncStatus?.dataFlowStatus.downloading ? <IconArrowDown color="gray" /> : null}
+
       <Flex align='center'>
         <ThemeIcon variant="white" color={ syncStatus?.connected ? 'green' : 'gray' } size="xs">
           <IconCircleFilled />
@@ -28,8 +31,6 @@ export function PowerSyncConnection() {
         { syncStatus?.connected ? 'Online' : 'Offline' }
       </Flex>
 
-      {syncStatus?.dataFlowStatus.uploading ? <IconArrowUp color="blue" /> : null}
-      {syncStatus?.dataFlowStatus.downloading ? <IconArrowDown color="blue" /> : null}
     </>
   )
 }
